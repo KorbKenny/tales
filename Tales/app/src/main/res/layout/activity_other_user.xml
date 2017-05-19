@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/crumpled_paper_bg_purp"
+    tools:context="com.draw.tales.user.OtherUserActivity">
+
+    <RelativeLayout
+        android:id="@+id/other_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yellow_gradient">
+        
+        <android.support.v7.widget.CardView
+            android:id="@+id/other_card"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="65dp">
+        <com.draw.tales.classes.SquareImageView
+            android:id="@+id/other_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/loadingsquareimage"
+            />
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/other_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center_horizontal"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:shadowDy="3"
+            android:shadowRadius="3"
+            android:shadowDx="3"
+            android:shadowColor="@color/white"
+            android:layout_toRightOf="@id/other_card"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/other_invite_card"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/other_card"
+            android:layout_below="@id/other_name"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="12dp">
+
+            <TextView
+                android:id="@+id/other_invite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/blue_gradient"
+                android:text="Invite to a group"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:shadowColor="@color/black"
+                android:shadowDx="3"
+                android:shadowRadius="3"
+                android:shadowDy="3"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:clickable="false"/>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/other_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/other_card"
+            android:textColor="@color/deep_purp"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="12dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/other_top_layout">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:background="@drawable/black_gradient"
+            android:alpha=".5"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/other_recycler"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    
+    
+
+</RelativeLayout>

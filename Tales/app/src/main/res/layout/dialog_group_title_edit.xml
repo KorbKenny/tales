@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@drawable/yellow_gradient">
+    <TextView
+        android:id="@+id/gte_rename"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:text="Rename the Group?"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/gte_dialog_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:maxLength="80"
+        android:inputType="textAutoComplete|textMultiLine|textCapSentences"
+        />
+
+
+</LinearLayout>

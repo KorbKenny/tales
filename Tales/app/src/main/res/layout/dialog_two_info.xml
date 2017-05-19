@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+                android:background="@drawable/purp_gradient">
+    <RelativeLayout
+        android:id="@+id/dti_main_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android:layout_margin="24dp">
+
+        <TextView
+            android:id="@+id/dti_illustrated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/hilite_blue"
+            android:textStyle="bold"
+            android:text="Illustrated by"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/dti_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/dti_illustrated"
+            android:textColor="@color/hilite_green"
+            android:shadowColor="@color/black"
+            android:textSize="36sp"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="3"/>
+
+        <RelativeLayout
+            android:id="@+id/dti_two_prompts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dti_username"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/dti_left_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Left Prompt by"
+                android:textColor="@color/hilite_blue"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/dti_left_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dti_left_by"
+                android:textColor="@color/hilite_green"
+                android:shadowColor="@color/black"
+                android:layout_alignParentLeft="true"
+                android:textSize="36sp"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"/>
+
+
+            <TextView
+                android:id="@+id/dti_right_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Right Prompt by"
+                android:textColor="@color/hilite_blue"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/dti_right_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/hilite_green"
+                android:shadowColor="@color/black"
+                android:layout_below="@id/dti_right_by"
+                android:textSize="36sp"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/dti_next_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Text Prompt by"
+                android:textColor="@color/hilite_blue"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/dti_next_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/hilite_green"
+                android:shadowColor="@color/black"
+                android:layout_below="@id/dti_next_by"
+                android:textSize="36sp"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/dti_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="report page?"
+            android:layout_below="@id/dti_username"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/hilite_yellow"
+            android:layout_marginTop="102dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+android:layout_marginTop="24dp"
+android:layout_marginBottom="24dp"
+android:layout_marginLeft="12dp"
+android:layout_marginRight="12dp"
+        android:id="@+id/dti_report_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+        
+        <TextView
+            android:id="@+id/dti_why"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Why are you reporting this page?"
+            android:textColor="@color/hilite_yellow"
+            android:textSize="20sp"
+            android:layout_marginBottom="24dp"/>
+        <EditText
+            android:id="@+id/dti_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences"
+            android:maxLines="6"
+            android:maxLength="300"
+            android:textColor="@color/hilite_green"
+            />
+        <Button
+            android:id="@+id/dti_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yellow_gradient"
+            android:text="submit"
+            android:padding="8dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="16dp"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

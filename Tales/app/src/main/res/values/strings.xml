@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">drawtales</string>
+    <string name="firebase_error_login">Error Logging In</string>
+    <string name="facebook_app_id">1634120376895007</string>
+    <string name="empty_buttons">What will you do?</string>
+    <string name="empty_button_if_you_drew">Somebody else should write the this option.</string>
+
+    <string name="global">Global</string>
+    <string name="first_story">FirstStory</string>
+    <string name="usernames">UserNames</string>
+
+    <string name="submit_drawing">Are you sure you want to submit this?\nOnce you do, it\'s written in stone!</string>
+    <string name="go_back">You\'ll lose all the progress you\'ve made on this drawing.</string>
+</resources>

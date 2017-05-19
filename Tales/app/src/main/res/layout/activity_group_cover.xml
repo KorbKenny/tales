@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_group_cover"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.draw.tales.groups.GroupCoverActivity"
+    android:background="@drawable/crumpled_paper_bg_purp">
+    <com.draw.tales.classes.SquareImageView
+        android:id="@+id/gc_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/crumpled_paper_bg_square"/>
+    <TextView
+        android:id="@+id/gc_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:padding="16dp"
+        android:paddingTop="16dp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:shadowColor="#ffffff"
+        android:shadowRadius="3"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:clickable="false"
+        android:longClickable="false"
+        />
+
+    <RelativeLayout
+        android:id="@+id/gc_middle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gc_cover"
+        android:background="@color/colorPrimary"
+        >
+        <TextView
+            android:id="@+id/gc_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:textColor="#ffffff"
+            android:layout_alignParentLeft="true"
+            android:text="\u24D8"
+            android:textStyle="bold"
+            android:fontFamily="casual"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/gc_members"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Members"
+            android:fontFamily="casual"
+            android:textColor="#ffffff"
+            android:layout_marginRight="16dp"
+            android:textSize="18sp"
+            android:paddingTop="8dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="6dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/gc_buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/gc_middle_layout"
+        android:paddingTop="16dp"
+        >
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/gc_start_beginning"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardCornerRadius="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/gc_start_beginning_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/green_gradient"
+            android:text="Start"
+            android:gravity="center"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            android:shadowColor="#000000"
+            android:shadowRadius="3"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/gc_continue"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="8dp"
+            app:cardCornerRadius="16dp">
+        <TextView
+            android:id="@+id/gc_continue_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/blue_gradient"
+            android:text="Continue"
+            android:gravity="center"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            android:visibility="visible"
+            android:shadowColor="#000000"
+            android:shadowRadius="3"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            />
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/gc_members_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:layout_below="@id/gc_middle_layout"
+        android:visibility="gone">
+        <RelativeLayout
+            android:id="@+id/gc_members_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/yellow_gradient">
+
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/gc_add_member_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabSize="normal"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:src="@drawable/ic_add_black_24dp"
+                android:layout_margin="16dp"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/gc_members_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                />
+            <ImageView
+                android:id="@+id/gc_settings_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/iconsettingsblack"
+                android:layout_alignParentBottom="true"
+                android:layout_above="@id/gc_add_member_fab"
+                android:layout_margin="16dp"
+                android:visibility="gone"
+                android:alpha=".6"
+                />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

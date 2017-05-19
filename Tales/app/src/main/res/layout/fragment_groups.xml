@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    android:background="@drawable/crumpled_paper_bg_purp">
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/turquoise_background"-->
+        <!--android:alpha=".4"/>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/black"-->
+        <!--android:alpha=".5"/>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/vh_group_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/group_frag_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/crumpled_paper_bg_purp"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/you_have_no_groups"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="You're not a part of any groups! Maybe you should create one?"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:textColor="@color/hilite_green"
+            android:shadowColor="@color/black"
+            android:shadowRadius="3"
+            android:layout_margin="16dp"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:padding="16dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/groups_loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/crumpled_paper_bg_purp">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/create_new_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:src="@drawable/ic_add_black_24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="24dp"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/invites_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="0dp"
+        app:cardBackgroundColor="@color/yellow_invite"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/invites_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:gravity="center_horizontal"
+                android:text="You're invited to join..."
+                android:fontFamily="casual"
+                android:textColor="#000000"
+                android:shadowColor="#ffffff"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="16dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/invites_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/invites_title"
+                android:paddingBottom="32dp"/>
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/crumpled_paper_bg_purp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yellow_gradient">
+        <android.support.v7.widget.CardView
+            android:id="@+id/my_user_card"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            app:cardCornerRadius="65dp"
+            android:layout_margin="16dp"
+            >
+            <ImageView
+                android:id="@+id/my_user_image"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:clickable="false"
+                />
+        </android.support.v7.widget.CardView>
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/my_user_invite_card"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/my_user_card"
+            android:layout_alignBottom="@id/my_user_card"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp">
+
+            <TextView
+                android:id="@+id/my_user_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/blue_gradient"
+                android:text="Edit Description"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:shadowColor="@color/black"
+                android:shadowDx="3"
+                android:shadowRadius="3"
+                android:shadowDy="3"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:clickable="false"/>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/my_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/my_user_card"
+            android:layout_above="@id/my_user_invite_card"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:shadowColor="@color/white"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"/>
+
+        <TextView
+            android:id="@+id/my_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_user_card"
+            android:textSize="22dp"
+            android:text="Loading..."
+            android:textColor="@color/deep_purp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="logout"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

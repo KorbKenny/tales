@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "203477926561",
+    "firebase_url": "https://tales-f4bac.firebaseio.com",
+    "project_id": "tales-f4bac",
+    "storage_bucket": "tales-f4bac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203477926561:android:d97c9a90f0d3c761",
+        "android_client_info": {
+          "package_name": "com.draw.tales"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203477926561-tqvvjovqmcgf9lpp672g5negtbgfsg0a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.draw.tales",
+            "certificate_hash": "C760A2C6268C9C47822AF8AD668155ADD190C000"
+          }
+        },
+        {
+          "client_id": "203477926561-h98aus1sonusagsvc5va7fvdnv2bp771.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd9m_bH8kwHaPGm-qFRMbxbK_FVkRx3V8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203477926561-h98aus1sonusagsvc5va7fvdnv2bp771.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
